@@ -9,6 +9,9 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { ListeOffresComponent } from './components/liste-offres/liste-offres.component';
 import { ListeCandidaturesComponent } from './components/liste-candidatures/liste-candidatures.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,9 @@ import { ListeCandidaturesComponent } from './components/liste-candidatures/list
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
