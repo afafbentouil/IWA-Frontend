@@ -51,7 +51,7 @@ export class AuthService{
             );
     }
  
-    register(registration : Login) : void {
+    /*register(registration : Login) : void {
       const options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
       this.http.post(environment.apiUrl + "user/signup", JSON.stringify(registration), options)
           .subscribe(error => {
@@ -61,5 +61,16 @@ export class AuthService{
                   this.router.navigateByUrl('animes');
               }
           )
+  }*/
+
+  register(username: string, email:string, password: string) {
+    return this.http.post<any>(environment.apiUrl+"/users/signup", { username,email, password })
+            .subscribe(error => {
+              alert("Une erreur s'est produite, veuillez réessayer de vous inscrire s'il vous plaît");
+            },
+            res => {
+                this.router.navigateByUrl('animes');
+            }
+          );
   }
 }

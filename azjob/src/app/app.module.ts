@@ -11,6 +11,8 @@ import { ListeCandidaturesComponent } from './components/liste-candidatures/list
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { LocalStorageService } from './services/local-storage.service';
 
 @NgModule({
   declarations: [

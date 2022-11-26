@@ -7,11 +7,11 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-  { path: '/login', component: LoginComponent },
-  { path: '/register', component: RegistrationComponent },
-  { path: '/user', component: UserComponent },
-  { path: '/offres', component: ListeOffresComponent }
+  //{ path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegistrationComponent },
+  { path: 'user', component: UserComponent },
+  { path: 'offres', component: ListeOffresComponent }
   //{ path: '/candidatures', component: ListeCandidaturesComponent }
 ];
 
